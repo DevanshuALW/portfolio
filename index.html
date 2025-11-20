@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DevOps Portfolio</title>
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide icons (UMD) -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.257.0/dist/umd/lucide.min.js"></script>
+
+  <style>
+    /* Custom styles */
+    body { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    a[download]{ text-decoration: none; }
+    @media (max-width: 640px) {
+      #terminal-line { font-size: 13px; }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+
+  <!-- Navigation -->
+  <nav id="top-nav" class="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm border-b border-blue-500/20 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-2">
+          <i data-lucide="terminal" class="w-6 h-6 text-blue-400"></i>
+          <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            DevOps Engineer
+          </span>
+        </div>
+        <div class="hidden md:flex space-x-8" id="nav-links">
+          <button data-section="home" class="capitalize hover:text-blue-400 transition-colors">home</button>
+          <button data-section="skills" class="capitalize hover:text-blue-400 transition-colors">skills</button>
+          <button data-section="devops-projects" class="capitalize hover:text-blue-400 transition-colors">devops projects</button>
+          <button data-section="freelance-projects" class="capitalize hover:text-blue-400 transition-colors">freelance projects</button>
+          <button data-section="metrics" class="capitalize hover:text-blue-400 transition-colors">metrics</button>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="https://github.com/DevanshuALW" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="github"><i data-lucide="github" class="w-5 h-5"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="linkedin"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+          <a href="mailto:sdevanshu096@gmail.com" class="hover:text-blue-400 transition-colors" aria-label="mail"><i data-lucide="mail" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-32 pb-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-5xl md:text-7xl font-bold mb-8 md:leading-[1.18] leading-[1.12] inline-block overflow-visible
+            bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent pb-2">
+                Cloud & DevOps Engineer
+        </h1>
+
+
+        <p class="text-xl md:text-2xl text-gray-300 mb-8">
+          Building Scalable, Secure & Automated Infrastructure at Scale
+        </p>
+
+        <!-- Pipeline Status Indicator -->
+        <div id="pipeline-indicator" class="inline-flex items-center space-x-3 bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-500/30 mb-8">
+          <div id="status-dot" class="w-3 h-3 rounded-full bg-yellow-400 animate-pulse"></div>
+          <span id="status-text" class="text-sm">Deploying Updates...</span>
+        </div>
+
+        <!-- Terminal Animation -->
+        <div class="max-w-2xl mx-auto bg-slate-950 rounded-lg border border-blue-500/30 p-4 text-left font-mono text-sm mb-8">
+          <div class="flex items-center space-x-2 mb-2 pb-2 border-b border-slate-700">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="text-gray-500 text-xs ml-2">terminal</span>
+          </div>
+          <div id="terminal-line" class="text-green-400"></div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a id="view-projects-btn" class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all transform hover:scale-105" href="#devops-projects">View Projects</a>
+          <a id="download-resume" class="inline-block px-8 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg font-semibold transition-all border border-blue-500/30" href="assets/resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+
+      <a id="chev" class="mx-auto block animate-bounce" href="#skills">
+        <i data-lucide="chevron-down" class="w-8 h-8 text-blue-400"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-4 bg-slate-900/50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl font-bold mb-12 text-center">Technical Expertise</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-16" id="skills-grid"></div>
+
+      <!-- <h3 class="text-2xl font-bold mb-6 text-center">Certifications</h3> -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" id="cert-grid"></div>
+    </div>
+  </section>
+
+  <!-- DevOps Projects Section -->
+  <section id="devops-projects" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-center mb-4">
+        <i data-lucide="terminal" class="w-8 h-8 text-blue-400 mr-3"></i>
+        <h2 class="text-4xl font-bold text-center">DevOps Projects</h2>
+      </div>
+      <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+        Infrastructure automation, CI/CD pipelines, and cloud-native solutions
+      </p>
+
+      <div class="space-y-8" id="devops-projects-list"></div>
+    </div>
+  </section>
+
+  <!-- Freelance Projects Section -->
+  <section id="freelance-projects" class="py-20 px-4 bg-slate-900/50">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-center mb-4">
+        <i data-lucide="briefcase" class="w-8 h-8 text-cyan-400 mr-3"></i>
+        <h2 class="text-4xl font-bold text-center">Freelance Projects</h2>
+      </div>
+      <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+        Client work, corporate websites, and custom web solutions
+      </p>
+
+      <div class="space-y-8" id="freelance-projects-list"></div>
+    </div>
+  </section>
+
+  <!-- Metrics Section -->
+  <section id="metrics" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl font-bold mb-12 text-center">Performance Metrics</h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8" id="metrics-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-4 border-t border-blue-500/20">
+    <div class="max-w-7xl mx-auto text-center">
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="https://github.com/DevanshuALW" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="github"><i data-lucide="github" class="w-6 h-6"></i></a>
+        <a href="https://www.linkedin.com" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="linkedin"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+        <a href="mailto:sdevanshu096@gmail.com" class="hover:text-blue-400 transition-colors" aria-label="mail"><i data-lucide="mail" class="w-6 h-6"></i></a>
+      </div>
+      <p class="text-gray-400 text-sm">
+        © 2025 DevOps Portfolio. Built with React inspiration + CI/CD ⚡
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // --- Data ---
+    const skills = [
+        { name: 'Cloud & Infrastructure (AWS)', level: 85, icon: 'server' },
+        { name: 'Containerization & Orchestration (Docker, K8s, Helm)', level: 80, icon: 'cloud' },
+        { name: 'CI/CD Automation (Jenkins, GitHub Actions, ArgoCD)', level: 90, icon: 'database' },
+        { name: 'Infrastructure as Code (Terraform, Ansible)', level: 82, icon: 'terminal' },
+        { name: 'Monitoring & Logging (Prometheus, Grafana, Alertmanager)', level: 88, icon: 'git-branch' },
+        { name: 'Security & DevSecOps (SonarQube, Trivy, Docker Scout, OWASP Dependency Check, AWS KMS)', level: 78, icon: 'lock' },
+        { name: 'Version Control & Linux (Git & GitHub, Linux Administration, Bash & Python scripting)', level: 80, icon: 'lock' },
+        { name: 'Cloud Networking & Load Balancing (VPC, Subnets, Security Groups, ALB/NLB, Route 53)', level: 78, icon: 'lock' },
+    ];
+
+
+    // DevOps Projects - You can update these later
+    const devopsProjects = [
+       {
+        title: 'DevOps 3 Tier Project',
+        description: 'Implemented a CI/CD pipeline using Jenkins, Docker, and Docker Compose to build, push, and deploy the app with automated health checks and MySQL readiness handling.',
+        tech: ['Jenkins', 'SonarQube', 'OWASP', 'Trivy', 'Docker & DockerHub', 'Github', ],
+        metrics: { clusters: '5', uptime: '99.9%', deployments: '200+' },
+        impact: 'Reduced deployment time by 70% and significantly enhanced pipeline stability and security.',
+        github: 'https://github.com/DevanshuALW/devops-exam-app.git',
+        demo: 'https://devops-exam-app.vercel.app/'
+      },
+      {
+        title: 'DevSecOps CI/CD Pipeline',
+        description: 'Built a complete DevSecOps pipeline with automated quality checks, security scans, optimized Docker builds, and EC2 deployment while resolving SonarQube, OWASP, and Jenkins issues.',
+        tech: ['Jenkins', 'SonarQube', 'OWASP', 'Trivy', 'Docker & DockerHub', 'Github', ],
+        metrics: { clusters: '5', uptime: '99.9%', deployments: '200+' },
+        impact: 'Reduced deployment time by 70% and significantly enhanced pipeline stability and security.',
+        github: 'https://github.com/DevanshuALW/DevOps-Project-Swiggy.git',
+        demo: 'https://dev-ops-project-swiggy.vercel.app/'
+      },
+      {
+        title: 'EC2 Observability Stack',
+        description: 'Implemented full EC2 monitoring using Prometheus, Node Exporter, Grafana, and Alertmanager, visualizing system health and enabling Slack alerts with validated alert flows.',
+        tech: ['Prometheus', 'Node Exporter', 'Grafana', 'Alertmanager', 'Slack Webhooks', 'Linux/Ubuntu EC2'],
+        metrics: { pipelines: '15+', builds: '50/day', time: '-60%' },
+        impact: 'Increased system visibility by 90% and enabled proactive issue detection through real-time metrics and automated Slack alerts.',
+        github: 'https://github.com/DevanshuALW',
+        demo: 'https://github.com/DevanshuALW'
+      },
+      {
+        title: 'Docker Scout + Trivy + OWASP Project',
+        description: 'Executed full container security analysis using Docker Scout, Trivy, and OWASP to detect and remediate image and dependency vulnerabilities.',
+        tech: ['Docker', 'Docker Scout', 'Trivy', 'OWASP', 'Jenkins', 'Linux/Ubuntu EC2'],
+        metrics: { pipelines: '15+', builds: '50/day', time: '-60%' },
+        impact: 'Reduced container vulnerabilities by over 50% and improved image security through optimized Docker builds and automated scanning workflows.',
+        github: 'https://github.com/DevanshuALW/DevOps-Project-Zomato-Kastro.git',
+        demo: 'https://dev-ops-project-zomato-kastro.vercel.app/'
+      },
+    ];
+
+    // Freelance Projects - You can update these later
+    const freelanceProjects = [
+      {
+        title: 'BillGuard (Corporate website)',
+        description: 'Production website for a biomass/corporate business (client work).',
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        metrics: { visits: '1k+/mo', clients: '15+/wk' },
+        impact: 'Improved client inquiries and overall business presence',
+        github: 'https://github.com/DevanshuALW/BillGuard.git',
+        demo: 'https://billguard.in/'
+      },
+      {
+        title: 'Somani Enterprises (Client repo)',
+        description: 'Corporate repo and website codebase (client project).',
+        tech: ['HTML', 'CSS', 'JS'],
+        metrics: { repo: 'Public', stars: '—' },
+        impact: 'Delivered responsive multi-page site',
+        github: 'https://github.com/DevanshuALW/SomaniEnterprises.git',
+        demo: 'https://somani-enterprises.vercel.app/'
+      },
+      {
+        title: 'DevTrades (Trading platform)',
+        description: 'Marketplace for trading scripts & analysis. A product project used for experimentation.',
+        tech: ['React', 'Node', 'MongoDB'],
+        metrics: { repo: 'Public', commits: '100+' },
+        impact: 'Experimented with deployment strategies and CI/CD',
+        github: 'https://github.com/DevanshuALW/DevTrades.git',
+        demo: 'https://dev-trades.vercel.app/' 
+      },
+    ];
+
+    const certifications = [
+      //{ name: 'AWS Solutions Architect', org: 'Amazon', year: '2024' }, 
+      //{ name: 'CKA - Kubernetes Admin', org: 'CNCF', year: '2024' }, 
+      //{ name: 'Terraform Associate', org: 'HashiCorp', year: '2023' }, 
+      //{ name: 'Azure DevOps Expert', org: 'Microsoft', year: '2023' },
+    ];
+
+    const metrics = [
+        { label: 'CI/CD Pipelines Delivered', value: '15+', icon: 'git-branch' },
+        { label: 'Production-Ready Deployments', value: '10+', icon: 'cloud-upload' },
+        { label: 'Docker Images Built', value: '20+', icon: 'package' },
+        { label: 'Monitoring Dashboards Created', value: '5+', icon: 'bar-chart-2' },
+        { label: 'Infrastructure Automated', value: '70%', icon: 'settings' },
+        { label: 'Security Scans Automated', value: '80+', icon: 'shield-check' },
+        { label: 'Incident Resolution Time', value: '< 25 min', icon: 'zap' },
+        { label: 'Pipeline Success Rate', value: '98%', icon: 'check-circle' },
+    ];
+
+
+
+    // --- DOM population ---
+    function populateSkills(){
+      const skillsGrid = document.getElementById('skills-grid');
+      skills.forEach(skill => {
+        const card = document.createElement('div');
+        card.className = 'bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-blue-500/20 hover:border-blue-500/40 transition-all';
+        card.innerHTML = `
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center space-x-3">
+              <div class="text-blue-400"><i data-lucide="${skill.icon}" class="w-4 h-4"></i></div>
+              <span class="font-semibold">${skill.name}</span>
+            </div>
+            <span class="text-blue-400 font-bold">${skill.level}%</span>
+          </div>
+          <div class="w-full bg-slate-700 rounded-full h-2">
+            <div class="bg-gradient-to-r from-blue-500 to-cyan-400 h-2 rounded-full transition-all duration-1000 skill-bar" style="width: 0%;"></div>
+          </div>
+        `;
+        skillsGrid.appendChild(card);
+      });
+    }
+
+    function populateCerts(){
+      const certGrid = document.getElementById('cert-grid');
+      certifications.forEach(cert => {
+        const card = document.createElement('div');
+        card.className = 'bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-blue-500/20 text-center hover:border-blue-500/40 transition-all';
+        card.innerHTML = `
+          <i data-lucide="award" class="w-8 h-8 text-yellow-400 mx-auto mb-2"></i>
+          <div class="font-semibold text-sm mb-1">${cert.name}</div>
+          <div class="text-xs text-gray-400">${cert.org} • ${cert.year}</div>
+        `;
+        certGrid.appendChild(card);
+      });
+    }
+
+    function populateProjects(projects, listId, accentColor = 'blue'){
+      const projectsList = document.getElementById(listId);
+      projects.forEach(project => {
+        const p = document.createElement('div');
+        p.className = 'bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all';
+        p.innerHTML = `
+          <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+            <div class="flex-1">
+              <h3 class="text-2xl font-bold mb-3 text-${accentColor}-400">${project.title}</h3>
+              <p class="text-gray-300 mb-4">${project.description}</p>
+
+              <div class="flex flex-wrap gap-2 mb-4">
+                ${project.tech.map(t => `<span class="px-3 py-1 bg-${accentColor}-600/20 text-${accentColor}-400 rounded-full text-sm border border-${accentColor}-500/30">${t}</span>`).join('')}
+              </div>
+
+              <div class="bg-slate-900/50 rounded-lg p-4 mb-4 border border-blue-500/10">
+                <div class="text-sm text-gray-400 mb-2">Key Metrics:</div>
+                <div class="grid grid-cols-3 gap-4">
+                  ${Object.entries(project.metrics).map(([key, value]) => `
+                    <div>
+                      <div class="text-xs text-gray-500 capitalize">${key}</div>
+                      <div class="text-lg font-bold text-${accentColor}-400">${value}</div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-2 text-green-400 bg-green-400/10 rounded-lg p-3 border border-green-500/20">
+                <i data-lucide="trending-up" class="w-5 h-5 mt-0.5 flex-shrink-0"></i>
+                <span class="text-sm">${project.impact}</span>
+              </div>
+            </div>
+
+            <div class="flex space-x-3 mt-4 lg:mt-0 lg:ml-6">
+              <a target="_blank" href="${project.github}" class="flex items-center space-x-2 px-4 py-2 bg-${accentColor}-600 hover:bg-${accentColor}-700 rounded-lg transition-all">
+                <i data-lucide="github" class="w-4 h-4"></i>
+                <span class="text-sm">Code</span>
+              </a>
+              <a target="_blank" href="${project.demo}" class="flex items-center space-x-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg transition-all">
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+                <span class="text-sm">Demo</span>
+              </a>
+            </div>
+          </div>
+        `;
+        projectsList.appendChild(p);
+      });
+    }
+
+    function populateMetrics(){
+      const metricsGrid = document.getElementById('metrics-grid');
+      metrics.forEach(metric => {
+        const card = document.createElement('div');
+        card.className = 'bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-blue-500/20 text-center hover:border-blue-500/40 transition-all hover:transform hover:scale-105';
+        card.innerHTML = `
+          <div class="text-blue-400 mb-4 flex justify-center"><i data-lucide="${metric.icon}" class="w-6 h-6"></i></div>
+          <div class="text-3xl font-bold mb-2 text-blue-400">${metric.value}</div>
+          <div class="text-sm text-gray-400">${metric.label}</div>
+        `;
+        metricsGrid.appendChild(card);
+      });
+    }
+
+    // --- Activate Lucide icons ---
+    function replaceIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        try { lucide.createIcons(); } catch(e){}
+        try { lucide.replace(); } catch(e){}
+      }
+    }
+
+    // --- Terminal typing animation ---
+    function terminalAnimation(){
+      const terminalEl = document.getElementById('terminal-line');
+      const fullCommand = '$ kubectl get deployments --all-namespaces';
+      let termIndex = 0;
+      const termInterval = setInterval(() => {
+        if (termIndex <= fullCommand.length) {
+          terminalEl.innerHTML = fullCommand.slice(0, termIndex) + '<span class="animate-pulse">▊</span>';
+          termIndex++;
+        } else {
+          clearInterval(termInterval);
+          terminalEl.innerHTML = fullCommand;
+        }
+      }, 50);
+    }
+
+    // --- Pipeline status toggling ---
+    function pipelineStatus(){
+      const statuses = ['running', 'success', 'running', 'success'];
+      let statusIndex = 0;
+      const statusDot = document.getElementById('status-dot');
+      const statusText = document.getElementById('status-text');
+      function updateStatus(s) {
+        if (s === 'success') {
+          statusDot.className = 'w-3 h-3 rounded-full bg-green-400 animate-pulse';
+          statusText.textContent = 'All Systems Operational';
+        } else {
+          statusDot.className = 'w-3 h-3 rounded-full bg-yellow-400 animate-pulse';
+          statusText.textContent = 'Deploying Updates...';
+        }
+      }
+      updateStatus(statuses[0]);
+      setInterval(() => {
+        statusIndex = (statusIndex + 1) % statuses.length;
+        updateStatus(statuses[statusIndex]);
+      }, 3000);
+    }
+
+    // --- Animate skill bars ---
+    function animateSkillBars() {
+      const bars = document.querySelectorAll('.skill-bar');
+      bars.forEach((bar, idx) => {
+        const target = skills[idx].level;
+        setTimeout(() => { bar.style.width = target + '%'; }, idx * 120);
+      });
+    }
+
+    // --- Smooth scroll + active nav highlight ---
+    function setupNav(){
+      const navButtons = document.querySelectorAll('#nav-links button');
+      function scrollToSection(section) {
+        document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+      }
+      navButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const section = btn.dataset.section;
+          scrollToSection(section);
+        });
+      });
+
+      // Active nav based on scroll
+      const sections = ['home','skills','devops-projects','freelance-projects','metrics'].map(id => document.getElementById(id));
+      window.addEventListener('scroll', () => {
+        const top = window.scrollY + 80;
+        sections.forEach(sec => {
+          const btn = document.querySelector(`#nav-links button[data-section="${sec.id}"]`);
+          if (!sec || !btn) return;
+          const rect = sec.getBoundingClientRect();
+          const secTop = window.scrollY + rect.top;
+          const secBottom = secTop + sec.offsetHeight;
+          if (top >= secTop && top < secBottom) {
+            btn.classList.add('text-blue-400');
+          } else {
+            btn.classList.remove('text-blue-400');
+          }
+        });
+      });
+      window.dispatchEvent(new Event('scroll'));
+    }
+
+    // --- Init ---
+    window.addEventListener('load', () => {
+      populateSkills();
+      populateCerts();
+      populateProjects(devopsProjects, 'devops-projects-list', 'blue');
+      populateProjects(freelanceProjects, 'freelance-projects-list', 'cyan');
+      populateMetrics();
+      replaceIcons();
+      terminalAnimation();
+      pipelineStatus();
+      animateSkillBars();
+      setupNav();
+      // small retry for icons and bars
+      setTimeout(() => { replaceIcons(); animateSkillBars(); }, 200);
+    });
+  </script>
+</body>
+</html>
