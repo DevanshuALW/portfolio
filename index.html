@@ -172,11 +172,20 @@
 
     // DevOps Projects - You can update these later
     const devopsProjects = [
-       {
+      {
+        title: 'Zero-Downtime Deployment System (Blue-Green + Canary on EKS)',
+        description: 'Built a zero-downtime deployment system on AWS EKS using Blue-Green and Canary strategies, automated through Jenkins and Docker, with full observability using Prometheus and Grafana.',
+        tech: ['Jenkins', 'SonarQube', 'OWASP', 'Trivy', 'Docker & DockerHub', 'Github',],
+        metrics: { clusters: '3', 'Deployment Success': '100% Zero Downtime', Observability: 'Prometheus & Grafana', },
+        impact: 'Delivered zero-downtime deployments and boosted release stability by 99% using automated Blue-Green and Canary rollouts.',
+        github: 'https://github.com/DevanshuALW/task-manager-devops.git',
+        demo: 'https://task-manager-devops-red.vercel.app/'
+      },
+      {
         title: 'DevOps 3 Tier Project',
         description: 'Implemented a CI/CD pipeline using Jenkins, Docker, and Docker Compose to build, push, and deploy the app with automated health checks and MySQL readiness handling.',
-        tech: ['Jenkins', 'SonarQube', 'OWASP', 'Trivy', 'Docker & DockerHub', 'Github', ],
-        metrics: { clusters: '5', uptime: '99.9%', deployments: '200+' },
+        tech: ['Jenkins', 'Docker', 'OWASP', 'AWS EC2', 'DockerHub', 'Github',],
+        metrics: { clusters: '3', uptime: '99.9%', 'Deployments Delivered': '150+', 'Rollback Time': '< 10 seconds (automated)', 'Deployment Speed Improvement': '70% faster' },
         impact: 'Reduced deployment time by 70% and significantly enhanced pipeline stability and security.',
         github: 'https://github.com/DevanshuALW/devops-exam-app.git',
         demo: 'https://devops-exam-app.vercel.app/'
@@ -184,9 +193,9 @@
       {
         title: 'DevSecOps CI/CD Pipeline',
         description: 'Built a complete DevSecOps pipeline with automated quality checks, security scans, optimized Docker builds, and EC2 deployment while resolving SonarQube, OWASP, and Jenkins issues.',
-        tech: ['Jenkins', 'SonarQube', 'OWASP', 'Trivy', 'Docker & DockerHub', 'Github', ],
-        metrics: { clusters: '5', uptime: '99.9%', deployments: '200+' },
-        impact: 'Reduced deployment time by 70% and significantly enhanced pipeline stability and security.',
+        tech: ['Jenkins', 'SonarQube', 'OWASP', 'Trivy', 'Docker & DockerHub', 'Github',],
+        metrics: { 'Security Issues Detected & Fixed': '300+', 'CI Pipeline Reliability': '99.5%', 'Build Time Reduction': '40%', 'Automated Scans Deployment': '4 (OWASP, SAST, Quality, Dependency)', deployments: '200+' },
+        impact: 'Automated end-to-end DevSecOps pipeline, reducing manual review time by 60%.',
         github: 'https://github.com/DevanshuALW/DevOps-Project-Swiggy.git',
         demo: 'https://dev-ops-project-swiggy.vercel.app/'
       },
@@ -194,8 +203,8 @@
         title: 'EC2 Observability Stack',
         description: 'Implemented full EC2 monitoring using Prometheus, Node Exporter, Grafana, and Alertmanager, visualizing system health and enabling Slack alerts with validated alert flows.',
         tech: ['Prometheus', 'Node Exporter', 'Grafana', 'Alertmanager', 'Slack Webhooks', 'Linux/Ubuntu EC2'],
-        metrics: { pipelines: '15+', builds: '50/day', time: '-60%' },
-        impact: 'Increased system visibility by 90% and enabled proactive issue detection through real-time metrics and automated Slack alerts.',
+        metrics: { pipelines: '15+', builds: '50/day', 'Time Saved': '~60%' },
+        impact: 'Increased EC2 system visibility by 90% and enabled proactive issue detection through real-time metrics and automated Slack alerts.',
         github: 'https://github.com/DevanshuALW',
         demo: 'https://github.com/DevanshuALW'
       },
@@ -203,7 +212,7 @@
         title: 'Docker Scout + Trivy + OWASP Project',
         description: 'Executed full container security analysis using Docker Scout, Trivy, and OWASP to detect and remediate image and dependency vulnerabilities.',
         tech: ['Docker', 'Docker Scout', 'Trivy', 'OWASP', 'Jenkins', 'Linux/Ubuntu EC2'],
-        metrics: { pipelines: '15+', builds: '50/day', time: '-60%' },
+        metrics: { pipelines: '15+', builds: '50/day', 'Time Saved': '~60%' },
         impact: 'Reduced container vulnerabilities by over 50% and improved image security through optimized Docker builds and automated scanning workflows.',
         github: 'https://github.com/DevanshuALW/DevOps-Project-Zomato-Kastro.git',
         demo: 'https://dev-ops-project-zomato-kastro.vercel.app/'
