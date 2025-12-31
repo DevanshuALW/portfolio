@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -13,13 +14,23 @@
 
   <style>
     /* Custom styles */
-    body { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
-    a[download]{ text-decoration: none; }
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a[download] {
+      text-decoration: none;
+    }
+
     @media (max-width: 640px) {
-      #terminal-line { font-size: 13px; }
+      #terminal-line {
+        font-size: 13px;
+      }
     }
   </style>
 </head>
+
 <body class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
 
   <!-- Navigation -->
@@ -35,14 +46,19 @@
         <div class="hidden md:flex space-x-8" id="nav-links">
           <button data-section="home" class="capitalize hover:text-blue-400 transition-colors">home</button>
           <button data-section="skills" class="capitalize hover:text-blue-400 transition-colors">skills</button>
-          <button data-section="devops-projects" class="capitalize hover:text-blue-400 transition-colors">devops projects</button>
-          <button data-section="freelance-projects" class="capitalize hover:text-blue-400 transition-colors">freelance projects</button>
+          <button data-section="devops-projects" class="capitalize hover:text-blue-400 transition-colors">devops
+            projects</button>
+          <button data-section="freelance-projects" class="capitalize hover:text-blue-400 transition-colors">freelance
+            projects</button>
           <button data-section="metrics" class="capitalize hover:text-blue-400 transition-colors">metrics</button>
         </div>
         <div class="flex items-center space-x-4">
-          <a href="https://github.com/DevanshuALW" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="github"><i data-lucide="github" class="w-5 h-5"></i></a>
-          <a href="https://www.linkedin.com" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="linkedin"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-          <a href="mailto:sdevanshu096@gmail.com" class="hover:text-blue-400 transition-colors" aria-label="mail"><i data-lucide="mail" class="w-5 h-5"></i></a>
+          <a href="https://github.com/DevanshuALW" target="_blank" class="hover:text-blue-400 transition-colors"
+            aria-label="github"><i data-lucide="github" class="w-5 h-5"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" class="hover:text-blue-400 transition-colors"
+            aria-label="linkedin"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+          <a href="mailto:sdevanshu096@gmail.com" class="hover:text-blue-400 transition-colors" aria-label="mail"><i
+              data-lucide="mail" class="w-5 h-5"></i></a>
         </div>
       </div>
     </div>
@@ -54,7 +70,7 @@
       <div class="text-center mb-12">
         <h1 class="text-5xl md:text-7xl font-bold mb-8 md:leading-[1.18] leading-[1.12] inline-block overflow-visible
             bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent pb-2">
-                Cloud & DevOps Engineer
+          Cloud & DevOps Engineer
         </h1>
 
 
@@ -63,13 +79,15 @@
         </p>
 
         <!-- Pipeline Status Indicator -->
-        <div id="pipeline-indicator" class="inline-flex items-center space-x-3 bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-500/30 mb-8">
+        <div id="pipeline-indicator"
+          class="inline-flex items-center space-x-3 bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-500/30 mb-8">
           <div id="status-dot" class="w-3 h-3 rounded-full bg-yellow-400 animate-pulse"></div>
           <span id="status-text" class="text-sm">Deploying Updates...</span>
         </div>
 
         <!-- Terminal Animation -->
-        <div class="max-w-2xl mx-auto bg-slate-950 rounded-lg border border-blue-500/30 p-4 text-left font-mono text-sm mb-8">
+        <div
+          class="max-w-2xl mx-auto bg-slate-950 rounded-lg border border-blue-500/30 p-4 text-left font-mono text-sm mb-8">
           <div class="flex items-center space-x-2 mb-2 pb-2 border-b border-slate-700">
             <div class="w-3 h-3 rounded-full bg-red-500"></div>
             <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -80,8 +98,12 @@
         </div>
 
         <div class="flex flex-wrap justify-center gap-4">
-          <a id="view-projects-btn" class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all transform hover:scale-105" href="#devops-projects">View Projects</a>
-          <a id="download-resume" class="inline-block px-8 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg font-semibold transition-all border border-blue-500/30" href="assets/resume.pdf" download>Download Resume</a>
+          <a id="view-projects-btn"
+            class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all transform hover:scale-105"
+            href="#devops-projects">View Projects</a>
+          <a id="download-resume"
+            class="inline-block px-8 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg font-semibold transition-all border border-blue-500/30"
+            href="assets/resume.pdf" download>Download Resume</a>
         </div>
       </div>
 
@@ -146,9 +168,12 @@
   <footer class="py-12 px-4 border-t border-blue-500/20">
     <div class="max-w-7xl mx-auto text-center">
       <div class="flex justify-center space-x-6 mb-6">
-        <a href="https://github.com/DevanshuALW" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="github"><i data-lucide="github" class="w-6 h-6"></i></a>
-        <a href="https://www.linkedin.com" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="linkedin"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-        <a href="mailto:sdevanshu096@gmail.com" class="hover:text-blue-400 transition-colors" aria-label="mail"><i data-lucide="mail" class="w-6 h-6"></i></a>
+        <a href="https://github.com/DevanshuALW" target="_blank" class="hover:text-blue-400 transition-colors"
+          aria-label="github"><i data-lucide="github" class="w-6 h-6"></i></a>
+        <a href="https://www.linkedin.com" target="_blank" class="hover:text-blue-400 transition-colors"
+          aria-label="linkedin"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+        <a href="mailto:sdevanshu096@gmail.com" class="hover:text-blue-400 transition-colors" aria-label="mail"><i
+            data-lucide="mail" class="w-6 h-6"></i></a>
       </div>
       <p class="text-gray-400 text-sm">
         © 2025 DevOps Portfolio. Built with React inspiration + CI/CD ⚡
@@ -159,14 +184,14 @@
   <script>
     // --- Data ---
     const skills = [
-        { name: 'Cloud & Infrastructure (AWS)', level: 85, icon: 'server' },
-        { name: 'Containerization & Orchestration (Docker, K8s, Helm)', level: 80, icon: 'cloud' },
-        { name: 'CI/CD Automation (Jenkins, GitHub Actions, ArgoCD)', level: 90, icon: 'database' },
-        { name: 'Infrastructure as Code (Terraform, Ansible)', level: 82, icon: 'terminal' },
-        { name: 'Monitoring & Logging (Prometheus, Grafana, Alertmanager)', level: 88, icon: 'git-branch' },
-        { name: 'Security & DevSecOps (SonarQube, Trivy, Docker Scout, OWASP Dependency Check, AWS KMS)', level: 78, icon: 'lock' },
-        { name: 'Version Control & Linux (Git & GitHub, Linux Administration, Bash & Python scripting)', level: 80, icon: 'lock' },
-        { name: 'Cloud Networking & Load Balancing (VPC, Subnets, Security Groups, ALB/NLB, Route 53)', level: 78, icon: 'lock' },
+      { name: 'Cloud & Infrastructure (AWS)', level: 85, icon: 'server' },
+      { name: 'Containerization & Orchestration (Docker, K8s, Helm)', level: 80, icon: 'cloud' },
+      { name: 'CI/CD Automation (Jenkins, GitHub Actions, ArgoCD)', level: 90, icon: 'database' },
+      { name: 'Infrastructure as Code (Terraform, Ansible)', level: 82, icon: 'terminal' },
+      { name: 'Monitoring & Logging (Prometheus, Grafana, Alertmanager)', level: 88, icon: 'git-branch' },
+      { name: 'Security & DevSecOps (SonarQube, Trivy, Docker Scout, OWASP Dependency Check, AWS KMS)', level: 78, icon: 'lock' },
+      { name: 'Version Control & Linux (Git & GitHub, Linux Administration, Bash & Python scripting)', level: 80, icon: 'lock' },
+      { name: 'Cloud Networking & Load Balancing (VPC, Subnets, Security Groups, ALB/NLB, Route 53)', level: 78, icon: 'lock' },
     ];
 
 
@@ -175,17 +200,17 @@
       {
         title: 'Zero-Downtime Deployment System (Blue-Green + Canary on EKS)',
         description: 'Built a zero-downtime deployment system on AWS EKS using Blue-Green and Canary strategies, automated through Jenkins and Docker, with full observability using Prometheus and Grafana.',
-        tech: ['Jenkins', 'SonarQube', 'OWASP', 'Trivy', 'Docker & DockerHub', 'Github',],
-        metrics: { clusters: '3', 'Deployment Success': '100% Zero Downtime', Observability: 'Prometheus & Grafana', },
+        tech: ['AWS EKS', 'Jenkins', 'Docker & Kubernetes', 'Amazon ECR', 'NGINX Ingress', 'Prometheus & Grafana', 'Blue-Green Deployments', 'Canary Releases'],
+        metrics: { clusters: '3', Deployment_Success: '100%', Observability: 'Full Prometheus + Grafana' },
         impact: 'Delivered zero-downtime deployments and boosted release stability by 99% using automated Blue-Green and Canary rollouts.',
-        github: 'https://github.com/DevanshuALW/task-manager-devops.git',
-        demo: 'https://task-manager-devops-red.vercel.app/'
+        github: 'https://github.com/DevanshuALW/devops-exam-app.git',
+        demo: 'https://devops-exam-app.vercel.app/'
       },
       {
         title: 'DevOps 3 Tier Project',
         description: 'Implemented a CI/CD pipeline using Jenkins, Docker, and Docker Compose to build, push, and deploy the app with automated health checks and MySQL readiness handling.',
-        tech: ['Jenkins', 'Docker', 'OWASP', 'AWS EC2', 'DockerHub', 'Github',],
-        metrics: { clusters: '3', uptime: '99.9%', 'Deployments Delivered': '150+', 'Rollback Time': '< 10 seconds (automated)', 'Deployment Speed Improvement': '70% faster' },
+        tech: ['Jenkins', 'SonarQube', 'OWASP', 'Trivy', 'Docker & DockerHub', 'Github',],
+        metrics: { clusters: '3', uptime: '99.9%', deployments: '150+', Rollback_Time: '< 10 seconds (automated)' },
         impact: 'Reduced deployment time by 70% and significantly enhanced pipeline stability and security.',
         github: 'https://github.com/DevanshuALW/devops-exam-app.git',
         demo: 'https://devops-exam-app.vercel.app/'
@@ -194,17 +219,17 @@
         title: 'DevSecOps CI/CD Pipeline',
         description: 'Built a complete DevSecOps pipeline with automated quality checks, security scans, optimized Docker builds, and EC2 deployment while resolving SonarQube, OWASP, and Jenkins issues.',
         tech: ['Jenkins', 'SonarQube', 'OWASP', 'Trivy', 'Docker & DockerHub', 'Github',],
-        metrics: { 'Security Issues Detected & Fixed': '300+', 'CI Pipeline Reliability': '99.5%', 'Build Time Reduction': '40%', 'Automated Scans Deployment': '4 (OWASP, SAST, Quality, Dependency)', deployments: '200+' },
-        impact: 'Automated end-to-end DevSecOps pipeline, reducing manual review time by 60%.',
+        metrics: { clusters: '5', uptime: '99.9%', deployments: '200+' },
+        impact: 'Reduced deployment time by 70% and significantly enhanced pipeline stability and security.',
         github: 'https://github.com/DevanshuALW/DevOps-Project-Swiggy.git',
         demo: 'https://dev-ops-project-swiggy.vercel.app/'
       },
       {
-        title: 'EC2 Observability Stack',
-        description: 'Implemented full EC2 monitoring using Prometheus, Node Exporter, Grafana, and Alertmanager, visualizing system health and enabling Slack alerts with validated alert flows.',
-        tech: ['Prometheus', 'Node Exporter', 'Grafana', 'Alertmanager', 'Slack Webhooks', 'Linux/Ubuntu EC2'],
-        metrics: { pipelines: '15+', builds: '50/day', 'Time Saved': '~60%' },
-        impact: 'Increased EC2 system visibility by 90% and enabled proactive issue detection through real-time metrics and automated Slack alerts.',
+        title: 'AI-Powered Observability & Automated Incident Response Platform',
+        description: 'Extended an EC2-based observability stack by integrating an AI-driven troubleshooting service that analyzes alerts using metrics and logs, generates root-cause analysis, and posts incident summaries to Slack.',
+        tech: ['Prometheus', 'Node Exporter', 'Grafana', 'Alertmanager', 'Slack Webhooks', 'FastAPI', 'OpenAI API', 'Docker', 'Linux/Ubuntu EC2'],
+        metrics: { Alerts_Analyzed: '100+', MTTR_Reduction: '~60%', Manual_Debugging: '-70%' },
+        impact: 'Increased system visibility by 90% and enabled proactive issue detection through real-time metrics and automated Slack alerts.',
         github: 'https://github.com/DevanshuALW',
         demo: 'https://github.com/DevanshuALW'
       },
@@ -212,7 +237,7 @@
         title: 'Docker Scout + Trivy + OWASP Project',
         description: 'Executed full container security analysis using Docker Scout, Trivy, and OWASP to detect and remediate image and dependency vulnerabilities.',
         tech: ['Docker', 'Docker Scout', 'Trivy', 'OWASP', 'Jenkins', 'Linux/Ubuntu EC2'],
-        metrics: { pipelines: '15+', builds: '50/day', 'Time Saved': '~60%' },
+        metrics: { pipelines: '15+', builds: '50/day', time: '-60%' },
         impact: 'Reduced container vulnerabilities by over 50% and improved image security through optimized Docker builds and automated scanning workflows.',
         github: 'https://github.com/DevanshuALW/DevOps-Project-Zomato-Kastro.git',
         demo: 'https://dev-ops-project-zomato-kastro.vercel.app/'
@@ -246,7 +271,7 @@
         metrics: { repo: 'Public', commits: '100+' },
         impact: 'Experimented with deployment strategies and CI/CD',
         github: 'https://github.com/DevanshuALW/DevTrades.git',
-        demo: 'https://dev-trades.vercel.app/' 
+        demo: 'https://dev-trades.vercel.app/'
       },
     ];
 
@@ -258,20 +283,20 @@
     ];
 
     const metrics = [
-        { label: 'CI/CD Pipelines Delivered', value: '15+', icon: 'git-branch' },
-        { label: 'Production-Ready Deployments', value: '10+', icon: 'cloud-upload' },
-        { label: 'Docker Images Built', value: '20+', icon: 'package' },
-        { label: 'Monitoring Dashboards Created', value: '5+', icon: 'bar-chart-2' },
-        { label: 'Infrastructure Automated', value: '70%', icon: 'settings' },
-        { label: 'Security Scans Automated', value: '80+', icon: 'shield-check' },
-        { label: 'Incident Resolution Time', value: '< 25 min', icon: 'zap' },
-        { label: 'Pipeline Success Rate', value: '98%', icon: 'check-circle' },
+      { label: 'CI/CD Pipelines Delivered', value: '15+', icon: 'git-branch' },
+      { label: 'Production-Ready Deployments', value: '10+', icon: 'cloud-upload' },
+      { label: 'Docker Images Built', value: '20+', icon: 'package' },
+      { label: 'Monitoring Dashboards Created', value: '5+', icon: 'bar-chart-2' },
+      { label: 'Infrastructure Automated', value: '70%', icon: 'settings' },
+      { label: 'Security Scans Automated', value: '80+', icon: 'shield-check' },
+      { label: 'Incident Resolution Time', value: '< 25 min', icon: 'zap' },
+      { label: 'Pipeline Success Rate', value: '98%', icon: 'check-circle' },
     ];
 
 
 
     // --- DOM population ---
-    function populateSkills(){
+    function populateSkills() {
       const skillsGrid = document.getElementById('skills-grid');
       skills.forEach(skill => {
         const card = document.createElement('div');
@@ -292,7 +317,7 @@
       });
     }
 
-    function populateCerts(){
+    function populateCerts() {
       const certGrid = document.getElementById('cert-grid');
       certifications.forEach(cert => {
         const card = document.createElement('div');
@@ -306,7 +331,7 @@
       });
     }
 
-    function populateProjects(projects, listId, accentColor = 'blue'){
+    function populateProjects(projects, listId, accentColor = 'blue') {
       const projectsList = document.getElementById(listId);
       projects.forEach(project => {
         const p = document.createElement('div');
@@ -355,7 +380,7 @@
       });
     }
 
-    function populateMetrics(){
+    function populateMetrics() {
       const metricsGrid = document.getElementById('metrics-grid');
       metrics.forEach(metric => {
         const card = document.createElement('div');
@@ -372,13 +397,13 @@
     // --- Activate Lucide icons ---
     function replaceIcons() {
       if (window.lucide && typeof window.lucide.createIcons === 'function') {
-        try { lucide.createIcons(); } catch(e){}
-        try { lucide.replace(); } catch(e){}
+        try { lucide.createIcons(); } catch (e) { }
+        try { lucide.replace(); } catch (e) { }
       }
     }
 
     // --- Terminal typing animation ---
-    function terminalAnimation(){
+    function terminalAnimation() {
       const terminalEl = document.getElementById('terminal-line');
       const fullCommand = '$ kubectl get deployments --all-namespaces';
       let termIndex = 0;
@@ -394,7 +419,7 @@
     }
 
     // --- Pipeline status toggling ---
-    function pipelineStatus(){
+    function pipelineStatus() {
       const statuses = ['running', 'success', 'running', 'success'];
       let statusIndex = 0;
       const statusDot = document.getElementById('status-dot');
@@ -425,7 +450,7 @@
     }
 
     // --- Smooth scroll + active nav highlight ---
-    function setupNav(){
+    function setupNav() {
       const navButtons = document.querySelectorAll('#nav-links button');
       function scrollToSection(section) {
         document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
@@ -438,7 +463,7 @@
       });
 
       // Active nav based on scroll
-      const sections = ['home','skills','devops-projects','freelance-projects','metrics'].map(id => document.getElementById(id));
+      const sections = ['home', 'skills', 'devops-projects', 'freelance-projects', 'metrics'].map(id => document.getElementById(id));
       window.addEventListener('scroll', () => {
         const top = window.scrollY + 80;
         sections.forEach(sec => {
@@ -474,4 +499,5 @@
     });
   </script>
 </body>
+
 </html>
